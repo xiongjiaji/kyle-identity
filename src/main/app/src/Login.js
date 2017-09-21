@@ -18,7 +18,7 @@ class Login extends Component {
   }
 
   handleClick(event) {
-    var apiBaseUrl = "http://localhost:8080/";
+    var apiBaseUrl = "http://localhost:8899/";
     var self = this;
     var payload = Qs.stringify({
       "username": this.state.username,
@@ -29,6 +29,8 @@ class Login extends Component {
       .then(function (response) {
         console.log(response);
         if (response.status == 200) {
+          sessionStorage.setItem("isLogin", "true");
+          self.props.history.push("/dashboard");
           console.log("Login successfull");
           var uploadScreen = [];
           alert("Login Successfully");

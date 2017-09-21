@@ -18,23 +18,15 @@ class App extends Component {
     }
   }
 
-  // componentWillMount() {
-  //   var loginPage = [];
-  //   loginPage.push(<Loginscreen parentContext={this} />);
-  //   this.setState({
-  //     loginPage: loginPage
-  //   })
-  // }
-
   render() {
     return (
       <div className="App">
         <ul role="nav">
           <li><Link to="/login">Login</Link></li>
-          <li><Link to="/Register">Register</Link></li>
+          <li><Link to="/register">Register</Link></li>
+          <li><Link to="/dashboard">Dashboard</Link></li>
+          <li><Link to="/logout">Logout</Link></li>
         </ul>
-        {/* {this.state.loginPage}
-        {this.state.uploadScreen} */}
       </div>
     );
   }

@@ -23,3 +23,8 @@ hs_err_pid*
 
 *.iml
 .idea/
+
+src/main/app/node_modules/
+src/main/app/build/
+target/
+src/main/app/yarn.lock
